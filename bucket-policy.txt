@@ -1,0 +1,27 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowAccountBFullAccess",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::924210591737:root"
+            },
+            "Action": [
+                "s3:*",
+                "s3:GetObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::razas877bucket",
+                "arn:aws:s3:::razas877bucket/*"
+            ]
+        },
+        {
+            "Sid": "Statement1",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::razas877bucket/*"
+        }
+    ]
+}
